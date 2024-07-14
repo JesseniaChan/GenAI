@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'HarmonyOS Sans SC Bold';
+    src: url('path/to/harmonyos-sans-sc-bold.woff2') format('woff2'),
+         url('path/to/harmonyos-sans-sc-bold.woff') format('woff'); /* Add more formats if needed */
+    font-weight: bold; /* Adjust font weight if necessary */
+    font-style: normal; /* Adjust font style if necessary */
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+    position: fixed; /* Fixed position to stay at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Align to the top */
+    background-color: white; /* Background color */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.header img {
+    width: 130px; /* Adjust width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Margin between image and navbar */
+}
+
+.navbar {
+    font-family: 'HarmonyOS Sans SC Bold', sans-serif;
+    user-select: none; /* Disable text selection */
+    display: flex; /* Use flexbox for layout */
+}
+
+.navbar a {
+    display: inline-block; /* Display links inline-block */
+    color: gray; /* Text color */
+    padding: 25px 16px; /* Padding inside each link */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 16px; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    font-weight: 800; /* Increase the font weight */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Change background color on hover */
+.navbar a:hover {
+    color: rgba(45, 124, 9, 0.849); /* Change text color */
+}
+
+.navbar a.active {
+    color: rgba(45, 124, 9, 0.849); /* Change text color */
+    /* Add additional styling as needed */
+}
+
+/* home section */
+#home {
+    background: url("../image/home.png") center top no-repeat;
+    background-size: cover;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; /* Align items to the start of the flex container */
+    flex-direction: column;
+    padding-top: 130px; /* Ensure content starts below the fixed header */
+    margin-top: 80px; /* Adjust margin to create space between header and section */
+    padding-left: 10%; /* Adjust this value to control the left margin */
+}
+
+
+#home h3 {
+    margin: 0;
+    font-size: 2.125em;
+    color: #b5d07b; 
+}
+
+#home h1 {
+    margin: 0;
+    font-size: 4.375em;
+    color: white;
+}
+
+
+#home p {
+    margin-top: 20px;
+    font-size: 1em;
+    color: white;
+}
+
+#home button {
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: white;
+    color: #7B8F41;
+    border: 2px solid #7B8F41;
+    padding: 3px 8px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#home button:hover {
+    background-color: #7B8F41; 
+    color: white; 
+}
+
+/* Style for the section */
+#sponsors {
+    position: relative;
+    padding: 100px 0; /* Adjust padding as needed */
+    overflow: hidden; /* Hide overflow to contain background image */
+}
+
+/* Style for the background image */
+#sponsors .background-image {
+    position: absolute;
+    top: 0;
+    left: -20%; /* Adjust left position for the amount of overlap */
+    background-image: url('../image/atom.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Behind other content */
+}
+
+/* Style for the content within the section */
+#sponsors .content {
+    position: relative; /* Ensure content is positioned relative to the section */
+    z-index: 1; /* Ensure content is above the background image */
+    padding: 50px;
+    margin-left: 13rem;
+}
+
+/* Style for the h1 heading */
+#sponsors h1 {
+    font-size: 2.5em; /* Example font size */
+    /* Add more styles as needed */
+}
+
+/* Footer styling */
+footer {
+    background-color: #dee2e5; /* Dark background color */
+    color: black; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Padding at the top and bottom */
+    font-family: 'HarmonyOS Sans SC Bold', sans-serif;
+
+}
+
+.footer-content {
+    max-width: 1200px; /* Max width to align with other content */
+    margin: 0 auto; /* Center the footer content */
+    font-family: 'HarmonyOS Sans SC Bold', sans-serif;
+
+}
+
+.footer-content p {
+    margin: 10px 0; /* Add vertical margin between paragraphs */
+    padding: 0 20px; /* Add padding around paragraphs */
+    font-family: 'HarmonyOS Sans SC Bold', sans-serif;
+
+}
+
+.social-media {
+    margin-top: 10px; /* Space between text and social media links */
+}
+
+.social-media a {
+    display: inline-block; /* Ensures the <a> tags behave like blocks */
+    margin: 0 10px; /* Space between links */
+    text-decoration: none; /* Remove underline */
+}
+
+.social-media a img {
+    width: 30px; /* Adjust the width of the social media icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.social-media a:hover img {
+    filter: brightness(1.5); /* Increase brightness on hover */
+}
