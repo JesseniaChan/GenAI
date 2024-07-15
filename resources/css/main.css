@@ -38,7 +38,7 @@
 
 .navbar a {
     display: inline-block; /* Display links inline-block */
-    color: gray; /* Text color */
+    color: #d8e0be; /* Text color */
     padding: 25px 16px; /* Padding inside each link */
     text-decoration: none; /* Remove underline from links */
     font-size: 16px; /* Increase font size */
@@ -49,14 +49,34 @@
 
 /* Change background color on hover */
 .navbar a:hover {
-    color: rgba(45, 124, 9, 0.849); /* Change text color */
+    color: #8b9f4f; /* Change text color */
 }
 
 .navbar a.active {
-    color: rgba(45, 124, 9, 0.849); /* Change text color */
+    color: #8b9f4f; /* Change text color */
     /* Add additional styling as needed */
 }
 
+.navbar .buy-tickets-button {
+    margin-top: 15px;
+    background-color: #8b9f4f;
+    color: white;
+    border-radius: 40px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    width: 150px;
+    height: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 17px; /* Adjust padding for button size */
+    margin-left: 10px; /* Adjust margin for space between buttons */
+}
+
+.navbar .buy-tickets-button:hover {
+    background-color: #7B8F41;
+    color: white;
+}
 /* home section */
 #home {
     background: url("../image/home.png") center top no-repeat;
@@ -108,35 +128,206 @@
 }
 
 /* Style for the section */
-#sponsors {
+#sponsors,
+#speakers,
+#exhibition,
+#agenda,
+#about,
+#location
+{
     position: relative;
-    padding: 100px 0; /* Adjust padding as needed */
+    padding: 80px 0; /* Adjust padding as needed */
     overflow: hidden; /* Hide overflow to contain background image */
 }
 
-/* Style for the background image */
-#sponsors .background-image {
-    position: absolute;
-    top: 0;
-    left: -20%; /* Adjust left position for the amount of overlap */
-    background-image: url('../image/atom.png');
-    background-size: cover;
-    background-position: center;
-    z-index: -1; /* Behind other content */
-}
-
 /* Style for the content within the section */
-#sponsors .content {
+#sponsors .content,
+#speakers .content,
+#exhibition .content,
+#agenda .content,
+#about .content,
+#location .content {
     position: relative; /* Ensure content is positioned relative to the section */
     z-index: 1; /* Ensure content is above the background image */
-    padding: 50px;
-    margin-left: 13rem;
+    padding: 20px;
+    margin-left: 10rem;
 }
 
 /* Style for the h1 heading */
-#sponsors h1 {
+#sponsors h1,
+#speakers h1,
+#exhibition h1,
+#agenda h1,
+#about h1,
+#location h1 {
     font-size: 2.5em; /* Example font size */
     /* Add more styles as needed */
+}
+.heading-with-icon {
+    display: inline-block;
+    position: relative;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.heading-with-icon::before {
+    content: url("../image/block.png"); 
+    position: absolute;
+    top: 50%;
+    left: -120px; 
+    transform: translateY(-50%);
+    width: 10px; 
+    height: auto;
+    z-index: -1;
+}
+
+.sponsor-box {
+    width: 180px; /* Set the width of each box */
+    height: 60px; /* Set the height of each box */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 30px; /* Rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin-top: 4rem;
+}
+
+.sponsor-box p {
+    text-align: center; /* Center text */
+    margin: 0; /* Remove default margin */
+}
+
+.sponsor-text {
+    font-size: 27px;
+    color: white;
+    font-weight: 1000;
+}
+
+#exhibition .first{
+    margin-top: 20px;
+    font-size: 1.2em;
+    margin-left: 35px; 
+    color: rgb(86, 151, 173);
+}
+#exhibition .second {
+    margin-top: 20px;
+    font-size: 1em;
+    color: black;
+}
+#exhibition .third {
+    margin-top: 20px;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: black;
+}
+#exhibition .fourth {
+    margin-top: 40px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #7B8F41;
+}
+
+#exhibition .fifth {
+    margin-top: 40px;
+    font-size: 1.1em;
+    color: grey;
+}
+.agenda-grid {
+    display: grid;
+    grid-template-columns: 100px 100px auto; /* Custom column widths to adjust spacing */
+    column-gap: 100px; /* Smaller space between Time and Keynote */
+    row-gap: 20px; /* Space between rows */
+    padding: 20px;
+}
+#exhibition .flex-container {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+}
+
+#exhibition .text-container {
+    flex: 1; /* Take remaining space */
+}
+
+#exhibition .image-and-text {
+    margin-left: 20px; /* Adjust spacing between text and image */
+    margin-top: 30px; /* Add margin to the top */
+    margin-bottom: 10px;
+    margin-right: 30px;
+}
+
+#exhibition .image-and-text img {
+    max-width: 100%; /* Ensure image does not exceed container width */
+    max-height: 400px;
+}
+
+
+#exhibition .image-and-text p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: rgb(86, 151, 173); /* Adjust text color as needed */
+}
+
+
+/* Agenda grid styles */
+.agenda-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr; /* Three equal columns */
+    gap: 20px; /* Gap between columns */
+    margin-top: 40px;
+}
+
+.agenda-column {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.agenda-item {
+    margin-bottom: 20px; /* Space between agenda items */
+}
+
+.row {
+    display: flex;
+    flex-direction: column; /* Stack label and item vertically */
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Space below label */
+}
+
+.item {
+    font-weight: 1000; 
+    font-size: 1.6em; 
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Add a slight text shadow */ 
+    font-family: 'Open Sans', sans-serif;
+}
+#about {
+    background: url("../image/about.png") center top no-repeat;
+    background-size: cover;
+    color: white;
+    line-height: 2;
+    background-position: center top; /* Adjusted to show more of the top part */
+    height: 450px;
+}
+
+#about h2{
+    margin-top: 20px;
+    color: white;
+    font-size: 1.6em; 
+
+}
+#location h1 {
+    font-size: 2.5em; /* Example font size */
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Adjust padding as needed */
+    margin-top: 30px;
 }
 
 /* Footer styling */
