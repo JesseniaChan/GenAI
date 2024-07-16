@@ -4,14 +4,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'HarmonyOS Sans SC Bold';
-    src: url('path/to/harmonyos-sans-sc-bold.woff2') format('woff2'),
-         url('path/to/harmonyos-sans-sc-bold.woff') format('woff'); /* Add more formats if needed */
-    font-weight: bold; /* Adjust font weight if necessary */
-    font-style: normal; /* Adjust font style if necessary */
-}
-
 /* Header styling */
 .header {
     display: flex;
