@@ -174,7 +174,19 @@
     z-index: -1;
 }
 
+.sponsor-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr; /* Two columns: one for categories, one for logos */
+    gap: 20px; /* Adjust the spacing between items */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.sponsor-item {
+    display: contents; /* Each item acts as a grid cell */
+}
+
 .sponsor-box {
+    grid-column: 1; /* Place in the first column */
     width: 180px; /* Set the width of each box */
     height: 60px; /* Set the height of each box */
     border: 1px solid #ccc; /* Border */
@@ -183,7 +195,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer; /* Change cursor to pointer on hover */
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .sponsor-box p {
@@ -195,6 +207,86 @@
     font-size: 27px;
     color: white;
     font-weight: 1000;
+}
+
+.logo-container {
+    margin-top: 3rem;
+    grid-column: 2; /* Place in the second column */
+    display: flex; /* Display images in a row */
+    gap: 50px; /* Adjust the spacing between logos */
+}
+
+.sponsor-logo {
+    grid-column: 2; /* Place in the second column */
+    width: 160px; /* Adjust the width as needed */
+}
+
+#Ctal {
+    width: 200px;
+}
+
+#sponsors .heading-container {
+    display: flex;
+    align-items: center; 
+}
+
+#sponsors .heading-with-icon {
+    flex-grow: 1; 
+}
+
+#sponsors .sponsor-button {
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 600px; 
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: white;
+    color: #7B8F41;
+    border: 2px solid #7B8F41;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, padding-right 0.3s; 
+    position: relative;
+    margin-top: 20px;
+}
+
+#sponsors .sponsor-button:hover {
+    color: white;
+    background-color: #7B8F41; 
+    padding-right: 40px; 
+}
+
+#sponsors .sponsor-button:hover::after {
+    content: '→'; 
+    position: absolute;
+    right: 10px; 
+    transition: right 0.3s ease; 
+    font-size: 23px; 
+    color: white;
+}
+
+.sponsor-images {
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between left and right images */
+}
+
+.left-image,
+.right-images {
+    flex: 1;
+}
+.left-image {
+    margin-top: 200px; /* Adjust the margin-top to move the left image down */
+}
+
+.right-images {
+    display: flex;
+    flex-direction: column;
+}
+
+.small-image {
+    max-width: 450px; /* Set maximum width for the images */
+    max-height: 450px; /* Set maximum height for the images */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .speakers-container {
