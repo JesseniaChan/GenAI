@@ -23,7 +23,7 @@
 }
 
 .navbar {
-    font-family: 'HarmonyOS Sans SC Bold', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     user-select: none; /* Disable text selection */
     display: flex; /* Use flexbox for layout */
 }
@@ -178,7 +178,7 @@
     width: 180px; /* Set the width of each box */
     height: 60px; /* Set the height of each box */
     border: 1px solid #ccc; /* Border */
-    border-radius: 30px; /* Rounded corners */
+    border-radius: 20px; /* Rounded corners */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,7 +201,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Space between cards */
+    gap: 15px; /* Space between cards */
 }
 
 /* Individual speaker cards */
@@ -240,6 +240,13 @@
 .speaker-card:hover {
     transform: scale(1.05); /* Slightly enlarge the card on hover */
 }
+
+.speaker-card:hover h2,
+.speaker-card:hover .title,
+.speaker-card:hover p {
+    transform: translateY(-10px); /* Move text upwards on hover */
+}
+
 
 #exhibition .first{
     margin-top: 20px;
@@ -372,21 +379,21 @@ footer {
     color: black; /* White text color */
     text-align: center; /* Center the text */
     padding: 20px 0; /* Padding at the top and bottom */
-    font-family: 'HarmonyOS Sans SC Bold', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
 }
 
 .footer-content {
     max-width: 1200px; /* Max width to align with other content */
     margin: 0 auto; /* Center the footer content */
-    font-family: 'HarmonyOS Sans SC Bold', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
 }
 
 .footer-content p {
     margin: 10px 0; /* Add vertical margin between paragraphs */
     padding: 0 20px; /* Add padding around paragraphs */
-    font-family: 'HarmonyOS Sans SC Bold', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
 }
 
