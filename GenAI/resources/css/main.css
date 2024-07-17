@@ -152,10 +152,7 @@
   
   .animateme {
     animation: myanim 5s;
-  }
-  
-  
-  
+}
 
 #home {
     background: url("../image/home.png") center top no-repeat;
@@ -462,24 +459,26 @@
     transform: translateY(-10px); /* Move text upwards on hover */
 }
 
-
 #exhibition .first{
     margin-top: 20px;
     font-size: 1.2em;
     margin-left: 35px; 
     color: rgb(86, 151, 173);
 }
+
 #exhibition .second {
     margin-top: 20px;
     font-size: 1em;
     color: black;
 }
+
 #exhibition .third {
     margin-top: 20px;
     font-size: 1.7em;
     font-weight: bold;
     color: black;
 }
+
 #exhibition .fourth {
     margin-top: 40px;
     font-size: 1.3em;
@@ -492,6 +491,7 @@
     font-size: 1.1em;
     color: grey;
 }
+
 .agenda-grid {
     display: grid;
     grid-template-columns: 100px 100px auto; /* Custom column widths to adjust spacing */
@@ -499,6 +499,7 @@
     row-gap: 20px; /* Space between rows */
     padding: 20px;
 }
+
 #exhibition .flex-container {
     display: flex;
     align-items: center; /* Vertical alignment */
@@ -517,7 +518,7 @@
 
 #exhibition .image-and-text img {
     max-width: 100%; /* Ensure image does not exceed container width */
-    max-height: 400px;
+    height: auto; /* Maintain aspect ratio */
 }
 
 
@@ -527,6 +528,32 @@
     color: rgb(86, 151, 173); /* Adjust text color as needed */
 }
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #exhibition .text-container {
+        flex: auto;
+        margin-left: 0; /* Remove left margin on smaller screens */
+        margin-top: 20px; /* Adjust margin top for text container */
+    }
+
+    #exhibition .image-and-text {
+        margin-left: 0; /* Remove left margin on smaller screens */
+        margin-right: 0; /* Remove right margin on smaller screens */
+    }
+
+    #exhibition .first,
+    #exhibition .second,
+    #exhibition .third,
+    #exhibition .fourth,
+    #exhibition .fifth {
+        margin-top: 15px; /* Adjust top margin for all text sections on smaller screens */
+    }
+    
+    #exhibition .image-and-text img {
+        max-width: 80%; /* Reduce image size for smaller screens */
+        height: auto;
+    }
+}
 
 /* Agenda grid styles */
 .agenda-grid {
