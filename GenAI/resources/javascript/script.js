@@ -35,7 +35,23 @@ function setActiveNavLink() {
         });
     });
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const element = entry.target.querySelector('.noanimfornow');
 
+            if (entry.isIntersecting) {
+                element.classList.add('animateme');
+                return; // if we added the class, exit the function
+            }
+
+            // We're not intersecting, so remove the class!
+            element.classList.remove('animateme');
+        });
+    });
+
+    observer.observe(document.querySelector('.animwrapper'));
+});
 // Run the function on page load
 window.onload = setActiveNavLink;
 

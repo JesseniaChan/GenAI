@@ -139,6 +139,24 @@
 }
 
 /* home section */
+@keyframes myanim {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  }
+  
+  .animateme {
+    animation: myanim 5s;
+  }
+  
+  
+  
+
 #home {
     background: url("../image/home.png") center top no-repeat;
     background-size: cover;
@@ -174,11 +192,12 @@
 
 #home button {
     margin-top: 20px;
+    font-weight: bold;
     font-size: 16px;
     background-color: white;
     color: #7B8F41;
     border: 2px solid #7B8F41;
-    padding: 3px 8px; 
+    padding: 7px 16px; 
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
