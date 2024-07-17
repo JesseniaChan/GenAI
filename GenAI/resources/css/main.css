@@ -4,53 +4,49 @@
     box-sizing: border-box;
 }
 
-/* Header styling */
 .header {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center items horizontally */
-    position: fixed; /* Fixed position to stay at the top */
-    width: 100%; /* Full width */
-    top: 0; /* Align to the top */
-    background-color: white; /* Background color */
-    z-index: 1000; /* Ensure it's above other content */
+    justify-content: center; 
+    position: fixed;
+    width: 100%; 
+    top: 0; 
+    background-color: white; 
+    z-index: 1000; 
 }
 
 .header img {
-    width: 130px; /* Adjust width of the image */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Margin between image and navbar */
+    width: 130px;
+    height: auto;
 }
 
 .navbar {
+    display: flex;
+    justify-content: center;
     font-family: 'Open Sans', sans-serif;
-    user-select: none; /* Disable text selection */
-    display: flex; /* Use flexbox for layout */
+    user-select: none;
+    flex-wrap: wrap;
 }
 
 .navbar a {
-    display: inline-block; /* Display links inline-block */
-    color: #d8e0be; /* Text color */
-    padding: 25px 16px; /* Padding inside each link */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 16px; /* Increase font size */
-    font-weight: bold; /* Make text bold */
-    font-weight: 800; /* Increase the font weight */
-    transition: color 0.3s; /* Smooth color transition */
+    display: inline-block;
+    color: #d8e0be;
+    padding: 25px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+    transition: color 0.3s;
 }
 
-/* Change background color on hover */
 .navbar a:hover {
-    color: #8b9f4f; /* Change text color */
+    color: #8b9f4f;
 }
 
 .navbar a.active {
-    color: #8b9f4f; /* Change text color */
-    /* Add additional styling as needed */
+    color: #8b9f4f;
 }
 
-.navbar .buy-tickets-button {
-    margin-top: 15px;
+.buy-tickets-button {
     background-color: #8b9f4f;
     color: white;
     border-radius: 40px;
@@ -61,14 +57,87 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 18px 17px; /* Adjust padding for button size */
-    margin-left: 10px; /* Adjust margin for space between buttons */
+    padding: 18px 17px;
+    margin-left: 10px;
+    font-size: 16px; /* Ensure the font size is consistent */
+    font-weight: 800; /* Ensure the font weight is consistent */
 }
 
-.navbar .buy-tickets-button:hover {
+.buy-tickets-button:hover {
     background-color: #7B8F41;
     color: white;
 }
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #8b9f4f;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+        padding: 15px 10px;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar .buy-tickets-button {
+        margin-top: 10px;
+        width: 80%;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 10px;
+    }
+
+    .header img {
+        margin-bottom: 10px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .navbar .buy-tickets-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
 /* home section */
 #home {
     background: url("../image/home.png") center top no-repeat;
@@ -155,6 +224,7 @@
     font-size: 2.5em; /* Example font size */
     /* Add more styles as needed */
 }
+
 .heading-with-icon {
     display: inline-block;
     position: relative;
@@ -172,6 +242,22 @@
     width: 10px; 
     height: auto;
     z-index: -1;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #sponsors .content,
+    #speakers .content,
+    #exhibition .content,
+    #agenda .content,
+    #about .content,
+    #location .content {
+        margin-left: 2rem; /* Adjust margin-left for smaller screens */
+    }
+
+    .heading-with-icon::before {
+        left: -120px; /* Adjust icon position for smaller screens */
+    }
 }
 
 .sponsor-container {
@@ -287,6 +373,24 @@
     max-height: 450px; /* Set maximum height for the images */
     width: auto; /* Maintain aspect ratio */
     height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .sponsor-box {
+        width: 130px; /* Further reduce width of sponsor boxes */
+        height: 50px; /* Further reduce height of sponsor boxes */
+        font-size: 18px; /* Further reduce font size of sponsor text */
+    }
+
+    .sponsor-logo {
+        max-width: 150%; /* Reduce max-width of logos for smaller screens */
+    }
+
+    .sponsor-images {
+        display: block; /* Display sponsor images */
+        margin-top: 2rem; /* Adjust top margin for sponsor images */
+    }
 }
 
 .speakers-container {

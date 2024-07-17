@@ -38,3 +38,8 @@ function setActiveNavLink() {
 
 // Run the function on page load
 window.onload = setActiveNavLink;
+
+
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('active');
+});
