@@ -1,3 +1,3 @@
 # GenAI
 
-GenAI official website
+GenAI official website: https://www.nextgentechgroups.com/
